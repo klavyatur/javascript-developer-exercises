@@ -13,6 +13,16 @@ function paintMixer(color1, color2) {
   */
   // PLACE YOUR CODE BELOW
 
+    if (color1 === 'red' || color2 === 'red') {
+      if (color1 === 'green' || color2 === 'green') return 'brown';
+      if (color1 === 'yellow' || color2 === 'yellow') return 'orange';
+      if (color1 === 'blue' || color2 === 'blue') return 'purple';
+    }
+    if (color1 === 'blue' || color2 === 'blue') {
+      if (color1 === 'yellow' || color2 === 'yellow') return 'green';
+    }
+
+    return 'unknown';
   // PLACE YOUR CODE ABOVE
 }
 

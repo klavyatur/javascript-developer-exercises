@@ -1,13 +1,14 @@
 var getSecondElement, secondElement
 
 /*
-Implement the below code so that createGetFunction returns a function.  That returned
-function should accept an array and return whichever element was specified by the
-parameter passed to createGetFunction when it was called.
+Implement the below code so that createGetFunction returns a function.  That returned function should accept an array and return whichever element was specified by the parameter passed to createGetFunction when it was called.
 */
 function createGetFunction(elementToReturn) {
   // PLACE YOUR CODE BELOW
-
+  return function getElement(array) {
+    // arrays are 0-indexed, so the 2nd element will be in the 1st index, etc.
+    return array[elementToReturn - 1];
+  }
   // PLACE YOUR CODE ABOVE
 }
 

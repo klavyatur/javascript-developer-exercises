@@ -16,6 +16,10 @@ let namesList = people.reduce(function(accumulator, currentValue) {
 
   // PLACE YOUR CODE BELOW
 
+  if (currentValue.age % 2 === 1) {
+    accumulator.push(currentValue.name);
+  }
+  return accumulator;
   // PLACE YOUR CODE ABOVE
 }, [])
 

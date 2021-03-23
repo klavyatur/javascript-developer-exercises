@@ -30,6 +30,8 @@ let widgets = [
 function specialSort(el1, el2) {
   // PLACE YOUR CODE BELOW
 
+  // check to see whether the sortKey property is a string or a number
+  // if both sortKeys are strings, sort descending (largest first)
   if (typeof(el1.sortKey) === 'string' && typeof(el2.sortKey) === 'string') {
     if (el1.sortKey < el2.sortKey) {
       return 1;
@@ -39,6 +41,7 @@ function specialSort(el1, el2) {
     }
   }
 
+  // if one sortKey is a string and the other is a number, put the string first
   if (typeof(el1.sortKey) === 'string' && typeof(el2.sortKey) === 'number') {
     return -1;
   }
@@ -47,6 +50,7 @@ function specialSort(el1, el2) {
     return 1;
   }
 
+  // if both sortKeys are numbers, sort ascending
   if (typeof(el1.sortKey) === 'number' && typeof(el2.sortKey) === 'number') {
     if (el1.sortKey < el2.sortKey) {
       return -1;

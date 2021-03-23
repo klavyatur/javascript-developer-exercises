@@ -13,15 +13,20 @@ function paintMixer(color1, color2) {
   */
   // PLACE YOUR CODE BELOW
 
+    // check if either color1 or color2 equal 'red'
+    // if so, check the other color to determine result. 
     if (color1 === 'red' || color2 === 'red') {
       if (color1 === 'green' || color2 === 'green') return 'brown';
       if (color1 === 'yellow' || color2 === 'yellow') return 'orange';
       if (color1 === 'blue' || color2 === 'blue') return 'purple';
     }
+    // check if either color1 or color2 equal 'blue'
+    // if so, check if the other color is yellow to return green
     if (color1 === 'blue' || color2 === 'blue') {
       if (color1 === 'yellow' || color2 === 'yellow') return 'green';
     }
 
+    // if none of the above return cases are triggered, return 'unknown'
     return 'unknown';
   // PLACE YOUR CODE ABOVE
 }

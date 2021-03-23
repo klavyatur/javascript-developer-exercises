@@ -16,6 +16,8 @@ let namesList = people.reduce(function(accumulator, currentValue) {
 
   // PLACE YOUR CODE BELOW
 
+  // check if the age is odd (check if the remainder of dividing the age by 2 is 1)
+  // if so, push the name to the accumulator (array)
   if (currentValue.age % 2 === 1) {
     accumulator.push(currentValue.name);
   }

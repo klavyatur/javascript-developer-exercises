@@ -5,6 +5,7 @@ Implement the below code so that createGetFunction returns a function.  That ret
 */
 function createGetFunction(elementToReturn) {
   // PLACE YOUR CODE BELOW
+  // return a function = closure
   return function getElement(array) {
     // arrays are 0-indexed, so the 2nd element will be in the 1st index, etc.
     return array[elementToReturn - 1];

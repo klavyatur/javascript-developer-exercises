@@ -23,6 +23,28 @@ before the next comment block.
 
 // PLACE YOUR CODE BELOW
 
+// iterate through words array
+for (let i = 0; i < words.length; i++) {
+
+  // declare temporary variable to hold the specified characters
+  let tempWord = words[i][1].concat(words[i][2]);
+
+  // check if it's the last word in the array. if not, add a ', ' to the string
+  if (i !== words.length - 1) {
+    tempWord += ', '
+  }
+
+  // this is specific to this prompt. it would probably be preferable to just reset wordList to an empty string initially, but I wasn't sure if that was allowed.
+
+  // check if the wordList length is greater than the length of the words array * 4
+  // if so, as is the case only initially, overwrite the wordList, otherwise, just add the temp word to the end of it
+  if (wordList.length > words.length * 4) {
+    wordList = tempWord;
+  } else {
+    wordList += tempWord;
+  }
+}
+
 // PLACE YOUR CODE ABOVE
 
 /*

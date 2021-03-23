@@ -17,6 +17,17 @@ console.log('Go!')
 
 // PLACE YOUR CODE BELOW
 
+// initial call to wait with 1 second, .then console.logs statement after the promise completes
+wait(1).then(() => {
+  console.log("I waited 1 second");
+}).then(() => {
+  // chain a .then which includes an anonymous function to call wait with 3 seconds, and chain another .then (nested .then) with an anonymous function to log next statement to the console
+  wait(3).then(() => {
+    console.log("I waited 3 more seconds");
+  })
+})
+
+
 // PLACE YOUR CODE ABOVE
 
 /*

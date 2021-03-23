@@ -68,6 +68,16 @@ function convertRideshareArray(array) {
     initialArray into an array that is equal to expectedArray
     */
     // PLACE YOUR CODE BELOW
+    
+    // declare an empty object to hold the data
+    const newArrayObject = {};
+
+    // set propertie of the newArrayObject equal to the appropriate values from the element object
+    newArrayObject['rideShareId'] = element.id; 
+    newArrayObject['numberMembers'] = element.members.length;
+
+    // return newArrayObject back to newArray
+    return newArrayObject;
 
     // PLACE YOUR CODE ABOVE
   })

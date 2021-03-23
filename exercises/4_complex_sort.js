@@ -30,6 +30,32 @@ let widgets = [
 function specialSort(el1, el2) {
   // PLACE YOUR CODE BELOW
 
+  if (typeof(el1.sortKey) === 'string' && typeof(el2.sortKey) === 'string') {
+    if (el1.sortKey < el2.sortKey) {
+      return 1;
+    }
+    if (el1.sortKey > el2.sortKey) {
+      return -1;
+    }
+  }
+
+  if (typeof(el1.sortKey) === 'string' && typeof(el2.sortKey) === 'number') {
+    return -1;
+  }
+
+  if (typeof(el1.sortKey) === 'number' && typeof(el2.sortKey) === 'string') {
+    return 1;
+  }
+
+  if (typeof(el1.sortKey) === 'number' && typeof(el2.sortKey) === 'number') {
+    if (el1.sortKey < el2.sortKey) {
+      return -1;
+    }
+    if (el1.sortKey > el2.sortKey) {
+      return 1;
+    }
+  }
+
   // PLACE YOUR CODE ABOVE
 }
 
